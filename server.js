@@ -89,9 +89,9 @@ io.on("connection", (socket) => {
 const createNewRoomHandler = (data, socket) => {
   console.log("host is creating new room");
   console.log(data);
-  const { identity, onlyAudio } = data;
+  const { identity, onlyAudio,hostId } = data;
 
-  const roomId = uuidv4();
+  const roomId = hostId;
 
   // create new user
   const newUser = {
