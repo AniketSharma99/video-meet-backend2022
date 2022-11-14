@@ -91,7 +91,7 @@ const createNewRoomHandler = (data, socket) => {
   console.log(data);
   const { identity, onlyAudio,hostId } = data;
 
-  const roomId = hostId;
+  const roomId = hostId?hostId:"12345";
 
   // create new user
   const newUser = {
